@@ -1,0 +1,46 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>Home page</title>
+{% endblock %}
+
+
+{% block body_block %}
+
+
+
+
+<div
+      class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp'); height: 93vh;">
+
+  
+
+
+
+
+  {% if username %}
+        <h1>Welcome to Home Page Mr/Ms {{username}}</h1>
+       
+        <a href="{% url 'ask_a_questions' %}" class="btn btn-danger">Ask The Question's</a><br>
+
+        <br>
+
+        <a href="{% url 'question_list' %}" class="btn btn-info">Display The Questions</a>
+
+    {% else %}
+        <h2>Welcome To Home Page</h2>
+    
+    {% endif %}
+
+  
+</div>
+
+
+
+
+
+    
+
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+
+    <title>Answerpage</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{AFO.as_p}}
+
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

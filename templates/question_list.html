@@ -1,0 +1,50 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>Question List</title>
+{% endblock %}
+
+
+{% block body_block %}
+<style>
+    #one,#two{
+        position: fixed;
+        bottom: 50px;
+        right: 100px;
+        
+    }
+    #two
+    {
+        bottom: 10px;
+        right: 140px;
+        border-radius: 50% 0% ;
+    }
+</style>
+
+<div class="mask" style="background: linear-gradient(to bottom, rgba(0, 47, 75, 0.8) 0%, rgba(220, 66, 37, 0.8));">
+
+
+    <table class="table table-hover text-bold" >
+        <tr>
+            <th>Question By...</th>
+            <th>Question</th>
+        </tr>
+
+            {% for Q in QUES %}
+
+            <tr>
+                <td>{{Q.username}}</td>
+                <td> {{Q.question}} </td>
+            </tr>
+
+
+            {% endfor %}
+
+    
+    </table>
+
+
+    <a href="{% url 'write_answer' %}" class="btn btn-info" id="one">Answer The Questions</a>
+    
+
+    <a href="{% url 'home' %}" id="two" class="btn btn-light">Back to Home</a>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'dummy.html' %}
+
+
+{% block title %}
+
+    <title>This Registration Form</title>
+
+{% endblock %}
+
+
+
+
+{% block body_block %}
+
+
+
+<div class="d-flex justify-content-center text-white " >
+
+    <div class="bg-image h-100% view  " style="width: 500px; min-height:100%;">
+
+        
+        <div class="mask" style="background: linear-gradient(to bottom, rgba(0, 47, 75, 0.8) 0%, rgba(220, 66, 37, 0.8));">
+
+
+
+
+
+    
+            <div class="h-100 w-100 align-items-center">
+
+                <div class="mt-5 p-4 text-center">
+
+                    <div class="form-outline form-white my-5">
+
+
+                        
+    <form  method="POST">
+
+                    
+
+                    {% csrf_token %}
+        
+        {{UFA.as_p}} <br>
+        <br>
+
+        <input type="submit" value="Register" class="btn btn-primary btn-lg">
+
+    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+        
+
+
+   
+{% endblock %}
